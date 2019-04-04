@@ -10,6 +10,6 @@ export class MoviesServicesService {
   }
 
   getMovie(idMovie: number){
-
+    return this.moviesList.filter(movie => movie.id === idMovie);
   }
 }
