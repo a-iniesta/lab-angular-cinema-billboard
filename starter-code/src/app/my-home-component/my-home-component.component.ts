@@ -16,4 +16,7 @@ listMovies: Array<Imovies> = []
     this.listMovies = this.moviesServices.getMovies();
   }
 
+  returnHome(){
+
+  }
 }

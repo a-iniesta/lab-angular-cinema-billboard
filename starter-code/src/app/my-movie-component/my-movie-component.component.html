@@ -1,3 +1,22 @@
-<p>
-  my-movie-component works!
-</p>
+<div class="content-movie">
+  <h2>ROOM {{movie.room}} {{movie.title}}</h2>
+  <table>
+    <td colspan="12" class="resSingle">
+      <tr class="img-position">
+        <img [src]="movie.poster" height="400px">
+      </tr>
+    </td>
+    <td>
+      <tr class="information-position"><span>
+          <p>Genres: {{movie.genres}}</p>
+          <p>Year: {{movie.year}}</p>
+          <p>Director: {{movie.director}}</p>
+          <p>Schedule: {{movie.hours}}</p>
+        </span>
+        <h4>{{movie.synopsis}}</h4>
+      </tr>
+    </td>
+  </table>
+
+  <button  class="button-return-home" [routerLink]="['/home']" type="button">HOME</button>
+</div>

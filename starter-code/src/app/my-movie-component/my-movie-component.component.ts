@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MoviesServices } from '../services/movies-services';
 
 @Component({
   selector: 'app-my-movie-component',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyMovieComponentComponent implements OnInit {
 
-  constructor() { }
+  movie: Imovies;
+  constructor(private rutaActiva: ActivatedRoute,
+              private moviesServices: MoviesServices) {
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    this.movie = this.moviesServices.getMovie(+this.rutaActiva.snapshot.params.movieID)
+  }
+
+  returnHome() {
+
+  }
 }

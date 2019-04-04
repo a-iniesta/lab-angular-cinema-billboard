@@ -13,7 +13,7 @@ export class MoviesServices {
     return  this.moviesList;
   }
 
-  getMovie(idMovie: number){
-    return this.moviesList.filter(movie => movie.id === idMovie);
+  getMovie(idMovie: number): Imovies{
+    return this.moviesList.filter(movie => movie.id === idMovie)[0];
   }
 }
