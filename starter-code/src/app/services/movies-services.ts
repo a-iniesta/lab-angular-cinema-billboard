@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { LoadMovies } from './config/load-moovies';
 
 @Injectable()
-export class MoviesServicesService {
+export class MoviesServices {
+  loadMovies: LoadMovies = new LoadMovies() ;
   moviesList: Array<Imovies> = []
-  constructor() { }
+  constructor() {
+    this.moviesList = this.loadMovies.getMoviesList;
+  }
 
   getMovies(): Array<Imovies> {
     return  this.moviesList;

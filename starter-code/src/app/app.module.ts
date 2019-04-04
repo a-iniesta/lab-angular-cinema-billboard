@@ -4,14 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { MoviesServicesService } from './services/movies-services.service';
+import { MoviesServices } from './services/movies-services';
 import { MyHomeComponentComponent } from './my-home-component/my-home-component.component';
 import { MyMovieComponentComponent } from './my-movie-component/my-movie-component.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home',  component: MyHomeComponentComponent },
-  { path: 'movie/:productID',  component: MyMovieComponentComponent }
+  { path: 'movie/:movieID',  component: MyMovieComponentComponent }
 ];
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HttpModule
   ],
-  providers: [MoviesServicesService],
+  providers: [MoviesServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

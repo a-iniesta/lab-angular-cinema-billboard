@@ -1,0 +1,8 @@
+.movies-container {
+  display: flex;
+}
+
+.margin-movie {
+  margin-right: 25px;
+  text-align: center;
+}

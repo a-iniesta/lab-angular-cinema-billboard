@@ -1,3 +1,7 @@
-<p>
-  my-home-component works!
-</p>
+<div class="movies-container">
+  <div class="margin-movie" *ngFor="let movie of listMovies">
+    <a [routerLink]="['/movie', movie.room]"><h2>ROOM {{movie.room}}</h2></a>
+    <img [src]="movie.poster" height="250px" alt="{{movie.title}}">
+    <p>{{movie.title}}</p>
+  </div>
+</div>
